@@ -11,7 +11,11 @@ Se você for aprovado nesta etapa, será convidado para uma entrevista final com
   Desenvolver um sistema de gerenciamento de despesas, para manter controle entre gastos e receita:
   - Pré-requisitos:
     ```
-    * Se for persistir os dados em banco de dados, utilizar o MySql.
+    * Utilização do SGBD Oracle ou MySQL.
+    * JDK 1.8+
+    * Maven 3+
+    * JUnit 4+
+    * Framework Web a critério (Servlets, JSF, Spring MVC ou afins)
     * Criação de um DUMP com massa de dados.
     ```
 
@@ -29,14 +33,6 @@ Se você for aprovado nesta etapa, será convidado para uma entrevista final com
     * Seu código; 
     * Organização;
     * Boas práticas;
-    ```
-
-  - Tecnologias
-    ```
-    * JDK 1.8+
-    * Maven 3+
-    * JUnit 4+
-    * Framework Web a critério (Servlets, JSF, Spring MVC ou afins)
     ```
 
 ### Instruções
