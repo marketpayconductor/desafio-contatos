@@ -1,4 +1,4 @@
-# desafio-despesas
+# desafio-contatos
 
 ### Desafio Conductor de Seleção 
 Olá, queremos convidá-lo a participar de nosso desafio de seleção.  Pronto para participar? Seu trabalho será visto por nosso time e você receberá ao final um feedback sobre o que achamos do seu trabalho. Não é legal?
@@ -11,7 +11,6 @@ Se você for aprovado nesta etapa, será convidado para uma entrevista final com
   Desenvolver um sistema de gerenciamento de despesas, para manter controle entre gastos e receita:
   - Pré-requisitos:
     ```
-    * Desenvolver os recursos em API Rest;
     * Se for persistir os dados em banco de dados, utilizar o MySql.
     * Criação de um DUMP com massa de dados.
     ```
@@ -21,6 +20,7 @@ Se você for aprovado nesta etapa, será convidado para uma entrevista final com
     * Adicionar e Manter contato;
     * Adicionar/Alterar/Remover: dados do contato;
     * Consultar Contatos, por filtros de dados;
+    * API Rest para cadastro de telefone ao contato;
     * Possibilidade de categorizar e manter contatos em Grupos (Escopo Bônus);
     ```
     
