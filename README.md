@@ -5,6 +5,7 @@ Este projeto tem como objetivo desenvolver uma aplicação Spring que implementa
 * MySQL 5.7
 * JDK 1.8
 * Maven 4.0
+* Bootstrap 4
 * Spring Framework 1.5.9
 * Thymeleaf Template Engine
 
@@ -12,6 +13,7 @@ Este projeto tem como objetivo desenvolver uma aplicação Spring que implementa
 * Criar um contato.
 * Deletar um contato.
 * Atualizar dados do contato.
+* Pesquisar contato por nome, endereço ou telefone.
 * Visualizar contatos.
 * Persistência dos dados no banco.
 * O arquivo 'data.sql' popula inicialmente o banco de dados com alguns contatos.
@@ -19,7 +21,7 @@ Este projeto tem como objetivo desenvolver uma aplicação Spring que implementa
 ## Requisitos
 1. Na linha de comando (Linux), abra o MySQL(password:root):
 ```mysql -u root -p```
-2. Crie o banco de dados.
+2. Crie o banco de dados:
 ```create database desafio_contatos;```
 
 ## Instalação/Execução (Linux):
@@ -29,9 +31,13 @@ Este projeto tem como objetivo desenvolver uma aplicação Spring que implementa
 ```mvn spring-boot:run```
 3. Acesse http://localhost:8080/.
 
-
-
-
+## Screenshots
+Tela Principal
+<img src="https://imgur.com/E4FzAvo.jpg"></img>
+Tela Adicionar Contato
+<img src="https://imgur.com/xpGJmj4.jpg"></img>
+Tela Pesquisar Contato
+<img src="https://imgur.com/QHcyqpx.jpg"></img>
 
 
 

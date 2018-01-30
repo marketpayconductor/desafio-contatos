@@ -47,13 +47,6 @@ public class ContatoController {
         return mv;
     }
 
-    @RequestMapping(value = "/search/{nome}", method = RequestMethod.GET)
-    public ModelAndView searchContato(@PathVariable(value = "nome") String nome) {
-        ModelAndView mv = new ModelAndView("/search");
-        mv.addObject("resultList", contatoService.getContatosByNome(nome));
-        return mv;
-    }
-
     @RequestMapping(path = "edit/{id}", method = RequestMethod.POST)
     public String editContato(@ModelAttribute Contato contato) {
         contatoService.save(contato);

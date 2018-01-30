@@ -22,13 +22,6 @@ public interface ContatoService {
     Contato getContatoById(long id);
 
     /**
-     * Return contacts that matches the name passed as parameter.
-     *
-     * @param nome - name of the contact.
-     */
-    List<Contato> getContatosByNome(String nome);
-
-    /**
      * Save a contact in the database.
      *
      * @param contato - Contact to be saved.

@@ -30,11 +30,6 @@ public class ContatoServiceImpl implements ContatoService {
     }
 
     @Override
-    public List<Contato> getContatosByNome(String nome) {
-        return contatoRepository.findAllByNome(nome);
-    }
-
-    @Override
     public Contato save(Contato contato) {
         return contatoRepository.saveAndFlush(contato);
     }
