@@ -1,0 +1,12 @@
+INSERT INTO contatos(nome, endereco, fone) values ('David Gilmour','2667 Stadium Drive, Attleboro, MA','508-223-6173');
+INSERT INTO contatos(nome, endereco, fone) values ('Bob Marley','3102 Coal Street, Altoona, PA','814-381-9821');
+INSERT INTO contatos(nome, endereco, fone) values ('Eric Clapton','4857 Jail Drive, Peoria, IL','309-964-1843');
+INSERT INTO contatos(nome, endereco, fone) values ('Stevie Ray Vaughan','3054 Jacobs Street, Carnegie, PA','412-279-5491');
+INSERT INTO contatos(nome, endereco, fone) values ('Michael Jackson','682 Davis Avenue, Fremont, CA','707-672-5835');
+INSERT INTO contatos(nome, endereco, fone) values ('Jim Morrison','2604 Platinum Drive, Pittsburgh, PA','724-781-2583');
+INSERT INTO contatos(nome, endereco, fone) values ('Nick Mason','889 Walnut Hill Drive, Cincinnati, OH','513-293-9969');
+INSERT INTO contatos(nome, endereco, fone) values ('Richard Wright','2421 Harvest Lane, Ravenwood, MO','660-937-6123');
+INSERT INTO contatos(nome, endereco, fone) values ('Roger Waters','838 Clover Drive, Colorado Springs, CO','719-265-6630');
+INSERT INTO contatos(nome, endereco, fone) values ('Phill Williams','1668 Cambridge Drive, Phoenix, AZ','623-505-6890');
+INSERT INTO contatos(nome, endereco, fone) values ('John Frusciante','4970 Duffy Street, Hammond, IN','219-838-1630');
+INSERT INTO contatos(nome, endereco, fone) values ('Chad Smith','3895 Rowes Lane, Louisville, KY','270-603-2972');
