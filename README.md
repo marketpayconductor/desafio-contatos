@@ -1,3 +1,47 @@
+# Desafio Contatos
+Este projeto tem como objetivo desenvolver uma aplicação Spring que implementa um CRUD de contatos para um sistema de gerenciamento de despesas.
+
+## Ferramentas Utilizadas
+* MySQL 5.7
+* JDK 1.8
+* Maven 4.0
+* Bootstrap 4
+* Spring Framework 1.5.9
+* Thymeleaf Template Engine
+
+## Features
+* Criar um contato.
+* Deletar um contato.
+* Atualizar dados do contato.
+* Pesquisar contato por nome, endereço ou telefone.
+* Visualizar contatos.
+* Persistência dos dados no banco.
+* O arquivo 'data.sql' popula inicialmente o banco de dados com alguns contatos.
+
+## Requisitos
+1. Na linha de comando (Linux), abra o MySQL(password:root):
+```mysql -u root -p```
+2. Crie o banco de dados:
+```create database desafio_contatos;```
+
+## Instalação/Execução (Linux):
+1. Primeiramente, clone este projeto.
+```git clone https://github.com/cassioesp/desafio-contatos.git```
+2. Vá até a pasta raiz do projeto e execute:
+```mvn spring-boot:run```
+3. Acesse http://localhost:8080/.
+
+## Screenshots
+Tela Principal
+<img src="https://imgur.com/E4FzAvo.jpg"></img>
+Tela Adicionar Contato
+<img src="https://imgur.com/xpGJmj4.jpg"></img>
+Tela Pesquisar Contato
+<img src="https://imgur.com/QHcyqpx.jpg"></img>
+
+
+
+
 # desafio-contatos
 
 ### Desafio Conductor de Seleção 

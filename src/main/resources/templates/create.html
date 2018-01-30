@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Desafio Contatos - Adicionar Contato</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Desafio Contatos</a>
+                </div>
+            </div>
+        </nav>
+        <br/><br/>
+        <div id="main" class="container-fluid">
+            <h3 class="page-header">Adicionar Contato</h3>
+            <form action="/save" name="contato" method="POST">
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label path="nome">Nome</label>
+                        <input type="text" class="form-control" name="nome"/>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label path="endereco">Endereço</label>
+                        <input type="text" class="form-control" name="endereco"/>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label path="fone">Telefone</label>
+                        <input type="text" class="form-control" name="fone"/>
+                    </div>
+                </div>
+                <hr/>
+                <div id="actions" class="row">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                        <a href="/" th:href="@{/}" class="btn btn-default">Cancelar</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>
