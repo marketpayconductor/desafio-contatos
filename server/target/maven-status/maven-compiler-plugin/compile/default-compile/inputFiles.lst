@@ -1,0 +1,14 @@
+/server/src/main/java/com/conductor/contacts/contacts/category/Category.java
+/server/src/main/java/com/conductor/contacts/contacts/Application.java
+/server/src/main/java/com/conductor/contacts/contacts/category/CategoryController.java
+/server/src/main/java/com/conductor/contacts/contacts/category/CategoryDTO.java
+/server/src/main/java/com/conductor/contacts/contacts/category/CategoryRepository.java
+/server/src/main/java/com/conductor/contacts/contacts/NotFoundException.java
+/server/src/main/java/com/conductor/contacts/contacts/contact/ContactDTO.java
+/server/src/main/java/com/conductor/contacts/contacts/category/CategoryServiceImpl.java
+/server/src/main/java/com/conductor/contacts/contacts/contact/ContactRepository.java
+/server/src/main/java/com/conductor/contacts/contacts/contact/Contact.java
+/server/src/main/java/com/conductor/contacts/contacts/category/CategoryService.java
+/server/src/main/java/com/conductor/contacts/contacts/contact/ContactService.java
+/server/src/main/java/com/conductor/contacts/contacts/contact/ContactServiceImpl.java
+/server/src/main/java/com/conductor/contacts/contacts/contact/ContactController.java

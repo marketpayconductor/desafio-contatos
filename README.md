@@ -1,3 +1,48 @@
+
+# Desafio Contatos
+Este projeto tem como objetivo desenvolver uma aplicação Spring que implementa um CRUD de contatos para um sistema de gerenciamento de despesas.
+
+## Ferramentas Utilizadas
+* MySQL 5
+* JDK 1.8
+* Maven 3.5
+* Angular 5
+* Angular Material
+* Spring Framework 1.5
+* Flywaydb
+
+## Features
+* Adicionar um contato.
+* Remover um contato.
+* Atualizar dados do contato.
+* Pesquisar contato por nome.
+* Pesquisar por categoria
+* Visualizar contatos.
+* Persistência dos dados.
+* Migration com dados para popular a base
+
+## Execução
+1. Clone o projeto ```git clone https://github.com/andersonleal/desafio-contatos```
+## Server
+1. Configurar o flywaydb no pom.xml com as credenciais do banco, um usuário que tenha permissão de criar esquemas no myqsl
+2. Configurar o arquivo resources/application.yml com usuário e senha do mysql
+3. Entrar na pasta server e executar 
+```mvn flyway:migrate```
+```mvn spring-boot:run```
+## Client
+1. Ter instalado o NodeJs [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+2. Entrar na pasta client e executar
+```npm install```
+```npm start```
+3. Acesse [http://localhost:4200](http://localhost:4200)
+
+## Execução (Docker):
+1. No terminal execute
+```docker-compose build```
+```docker-compose start mysql```
+```docker-compose up```
+2. Acesse [http://localhost](http://localhost)
+
 # desafio-contatos
 
 ### Desafio Conductor de Seleção 

@@ -1,0 +1,17 @@
+server:
+  port: 8090
+
+spring:
+  jpa:
+    database: mysql
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        ddl-auto: false
+  datasource:
+    url: jdbc:mysql://mysql:3306/contact?useSSL=false
+    username: root
+    password: 123
+
+log4j.logger.org.hibernate.SQL: DEBUG
+log4j.logger.org.hibernate.type: TRACE
