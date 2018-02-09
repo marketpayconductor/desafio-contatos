@@ -1,0 +1,53 @@
+<div fxLayout="column" fxLayoutAlign="center center" fxFill>
+  <div class="content mat-elevation-z3">
+    <mat-toolbar>Cadastro</mat-toolbar>
+    <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+
+    <div class="form">
+      <form (submit)="submit($event)" [formGroup]="form" autocomplete="off">
+        <div fxLayout="column" fxLayoutGap="10px">
+          <mat-form-field>
+            <mat-icon matSuffix>account_circle</mat-icon>
+            <input matInput placeholder="Nome" formControlName="name" autocomplete="off">
+            <mat-error *ngIf="form.get('name').hasError('required')">
+              Campo obrigatório
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-icon matSuffix>phone</mat-icon>
+            <input matInput placeholder="Telefone" formControlName="phoneNumber" maxlength="11" autocomplete="off">
+            <mat-error *ngIf="form.get('phoneNumber').hasError('required')">
+              Campo obrigatório
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-icon matSuffix>home</mat-icon>
+            <input matInput placeholder="Endereço" formControlName="address" autocomplete="off">
+            <mat-error *ngIf="form.get('address').hasError('required')">
+              Campo obrigatório
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-select placeholder="Cetegoria" formControlName="category" [compareWith]="compareSelect">
+              <mat-option *ngFor="let item of categories" [value]="item">
+                {{ item.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="end" fxLayoutGap="10px">
+          <button mat-button [disabled]="isLoading" color="warn" (click)="cancelClick()" type="button">
+            Voltar
+          </button>
+          <button mat-raised-button [disabled]="form.invalid || isLoading" color="primary" type="submit">
+            Enviar
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,11 @@
+<div mat-dialog-title *ngIf="title">
+  {{ title }}
+</div>
+
+<div mat-dialog-content *ngIf="message">
+  {{ message }}
+</div>
+<div mat-dialog-actions fxLayout="row" fxLayoutAlign="end">
+  <button mat-button color="primary" (click)="cancelClick()">Não</button>
+  <button mat-button color="warn" (click)="okClick()" cdkFocusInitial>Sim</button>
+</div>

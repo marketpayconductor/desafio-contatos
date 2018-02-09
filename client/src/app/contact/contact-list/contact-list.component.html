@@ -1,0 +1,79 @@
+<div fxLayout="row" fxLayoutGap="10px" class="content">
+  <div>
+    <div class="mat-elevation-z3">
+      <mat-toolbar>
+        Categorias
+      </mat-toolbar>
+      <div *ngFor="let item of categories" class="menu">
+        <button mat-button fxFill (click)="categoryFilter(item)" [color]="getSectedColor(item)">
+          {{ item.name }}
+        </button>
+        <mat-divider></mat-divider>
+      </div>
+    </div>
+  </div>
+  <div class="mat-elevation-z3" fxFlex="auto">
+    <div fxLayout="column">
+      <form (submit)="applyFilter($event, searchInput.value)">
+        <div class="search-box" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start center">
+          <mat-form-field fxFlex="auto">
+            <input matInput #searchInput placeholder="Localizar" autocomplete="off">
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit">
+            Procurar
+          </button>
+        </div>
+      </form>
+      <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+
+      <mat-table #table [dataSource]="data">
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> Nome </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="address">
+          <mat-header-cell *matHeaderCellDef> Endereço </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{ element.address }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="phoneNumber">
+          <mat-header-cell *matHeaderCellDef> Telefone </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{ element.phoneNumber }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+          <mat-header-cell *matHeaderCellDef></mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <div fxLayout="row" fxLayoutAlign="end">
+              <button mat-icon-button
+                      matTooltip="Remover"
+                      color="warn"
+                      [disabled]="isLoading"
+                      (click)="remove(element)">
+                <mat-icon>delete</mat-icon>
+              </button>
+              <button mat-icon-button
+                      matTooltip="Editar"
+                      color="primary"
+                      [disabled]="isLoading"
+                      (click)="edit(element)">
+                <mat-icon>edit</mat-icon>
+              </button>
+            </div>
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+
+    </div>
+
+  </div>
+</div>
+
+<button mat-fab color="primary" (click)="addClick()" class="add-button">
+  <mat-icon>person_add</mat-icon>
+</button>
+

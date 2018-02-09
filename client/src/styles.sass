@@ -1,0 +1,15 @@
+@import '~@angular/material/theming'
+
+@include mat-core()
+
+$contact-app-primary: mat-palette($mat-indigo)
+$contact-app-accent:  mat-palette($mat-pink, A200, A100, A400)
+$contact-app-warn:    mat-palette($mat-red)
+
+$contact-app-theme: mat-light-theme($contact-app-primary, $contact-app-accent, $contact-app-warn)
+
+@include angular-material-theme($contact-app-theme)
+
+body
+  margin: 0
+  background-color: ghostwhite
