@@ -1,0 +1,10 @@
+**/.tmp/
+**/.settings/
+**/.classpath
+**/.project
+**/target/**
+**.bak
+**/bin/**
+
+
+/target/

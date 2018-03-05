@@ -1,44 +1,24 @@
 # desafio-contatos
 
-### Desafio Conductor de Seleção 
-Olá, queremos convidá-lo a participar de nosso desafio de seleção.  Pronto para participar? Seu trabalho será visto por nosso time e você receberá ao final um feedback sobre o que achamos do seu trabalho. Não é legal?
+# Foi criado um projeto com estrura do maven, e configurado para o uso do spring-data, spring-mvc e spring boot.
+# Foi criada também a estrutura inicial para execução de testes de unidade com Junit.
+# Os arquivos de propriedades assim como os dados de conexão de banco estão dentro de um .properties nas pastas do projeto.
+  Em um projeto maior, seria configurado isso para uma pasta fora do servidor de aplicação e dentro de um "standalone.xml" da vida de um jboss por exemplo.
+# O script de criação do BD está na raiz do projeto, foi usado o Postgres 9.6.
+# O arquivo AppConfig.java pode ser executado para "subir" o contexto na maquina do desenvolvedor.
 
-### Sobre a oportunidade 
-A vaga é para Desenvolvedor Java, temos vagas com diversos níveis de senioridade e para cada um deles utilizaremos critérios específicos considerando esse aspecto, combinado? 
-Se você for aprovado nesta etapa, será convidado para uma entrevista final com nosso time técnico.
 
-### Desafio Técnico
-  Desenvolver um sistema de gerenciamento de despesas, para manter controle entre gastos e receita:
-  - Pré-requisitos:
-    ```
-    * Utilização do SGBD Oracle ou MySQL.
-    * JDK 1.8+
-    * Maven 3+
-    * JUnit 4+
-    * Framework Web a critério (Servlets, JSF, Spring MVC ou afins)
-    * Criação de um DUMP com massa de dados.
-    ```
+#Infelizmente não deu tempo implementar nem 50% de tudo que queria, além dos métodos de Repository, service e Controller das entidades que ficaram faltando,
+ainda tinha essas coisas que desejava fazer:
 
-  - O que esperamos como escopo:
-    ```
-    * Adicionar e Manter contato;
-    * Adicionar/Alterar/Remover: dados do contato;
-    * Consultar Contatos, por filtros de dados;
-    * API Rest para cadastro de telefone ao contato;
-    * Possibilidade de categorizar e manter contatos em Grupos (Escopo Bônus);
-    ```
-    
-  - O que vamos avaliar:
-    ```
-    * Seu código; 
-    * Organização;
-    * Boas práticas;
-    ```
+## Criar testes separados para as camadas "service" e "repository", usaria Mockito para Mockar as chamadas do services ao repository,
+assim serando as responsabilidades dos testes entre negócio e integração do o BD.
+## Usar o coverage para saber a cobertura de testes automaticos da minha aplicação.
+## Usar auditorias nas tabelas com JPA Auditing.
+## Documentar com JAVA doc
+## Tratamento correto das Exeções e criação de uma CustomException para o sistema, para validaçoes de negócio com mensagens configuradas.
+## Configuração de builds no maven.
 
-### Instruções
-      1. Faça o fork do desafio e crie uma branch 'desafio_contatos_nome_candidato';
-      2. Desenvolva. Você terá 2 (dois) dias a partir da data do envio do desafio; 
-      3. Após concluir seu trabalho faça um push; 
-      4. Crie um arquivo de texto com a nomenclatura README.MD com a explicação de como devemos executar o 
-        projeto e com uma descrição do que foi feito; 
-      5. Solicite o Merge request para o repositório original e que a força esteja com você.
+Dentre várias outras coisas.
+
+#Peço desculpas por não ter terminado a tempo, e fico a disposição para esclarecer qualquer dúvida.
