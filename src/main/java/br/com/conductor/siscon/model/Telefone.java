@@ -17,7 +17,7 @@ public class Telefone {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)
-	private long idContato;
+	private long idTelefone;
 
 	@Column(name = "numero", nullable = false, length = 100)
 	private String numeroTelefone;
@@ -26,12 +26,12 @@ public class Telefone {
 	@JoinColumn(name = "id_contato", nullable = false)
 	private Contato contado;
 
-	public long getIdContato() {
-		return idContato;
+	public long getIdTelefone() {
+		return idTelefone;
 	}
 
-	public void setIdContato(long idContato) {
-		this.idContato = idContato;
+	public void setIdTelefone(long idTelefone) {
+		this.idTelefone = idTelefone;
 	}
 
 	public String getNumeroTelefone() {

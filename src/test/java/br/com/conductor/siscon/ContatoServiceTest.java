@@ -2,6 +2,7 @@ package br.com.conductor.siscon;
 
 import static org.junit.Assert.fail;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,15 +21,22 @@ public class ContatoServiceTest {
 	@Autowired
 	public ContatoService service;
 	
+	public Contato contatoInicial;
+	
+	
+	@Before
+	public void montaNovoContato(){
+		Contato contatoSemGrupo = new Contato();
+		contatoSemGrupo.setNome("Edmilson Almeidaaaaaaaaaaaaaaaaa");
+		contatoSemGrupo.setEmail("ealmeidaaaaaaaaajunior@gmail.com");
+		
+	}
+	
 	@Test
 	@Rollback(true)
 	public void deveIncluirContatoComSucessoSemGrupoAssociado(){
 		try {
-			
-			Contato contatoSemGrupo = new Contato();
-			contatoSemGrupo.setNome("Edmilson Almeidaaaaaaaaaaaaaaaaa");
-			contatoSemGrupo.setEmail("ealmeidaaaaaaaaajunior@gmail.com");
-			service.salvarContato(contatoSemGrupo);
+			service.salvarContato(contatoInicial);
 		} catch (Exception e) {
 			fail("Erro ao tentar incluir contato sem um grupo associado.");
 		}
@@ -45,7 +53,17 @@ public class ContatoServiceTest {
 			service.salvarContato(c);
 			fail();
 		} catch (Exception e) {
-		
+			
+		}
+	}
+
+	@Test
+	@Rollback(true)
+	public void deveRemoverContatoExistente(){
+		try {
+			service.removerContatoPorEmail("ealmeidajunior@gmail.com");
+		} catch (Exception e) {
+			fail();
 		}
 	}
 

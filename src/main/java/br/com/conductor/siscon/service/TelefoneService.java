@@ -17,4 +17,19 @@ public class TelefoneService {
 	public List<Telefone> buscarTodos(){
 		return repository.findAll();
 	}
+
+	public void salvarTelefoneContato(Telefone telefone) throws Exception {
+		verificarExisteMesmoTelefoneParaContato(telefone);
+		
+	}
+
+	private void verificarExisteMesmoTelefoneParaContato(Telefone telefone) throws Exception {
+		
+		Telefone telefoneBanco = repository
+				.findByNumeroTelefoneAndContato(telefone.getNumeroTelefone(),telefone.getContado());
+		if(telefoneBanco != null){
+			throw new Exception(); // Deveria lançar uma exceção com mensagem de negócio.
+		}
+		
+	}
 }
